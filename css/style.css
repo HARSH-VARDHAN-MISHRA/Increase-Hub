@@ -15572,6 +15572,11 @@ footer .logo {
     animation: pulse-border 1500ms ease-out infinite;
 }
 
+.social-float:hover{
+  color: white;
+  scale: 1.05;
+}
+
 /* WhatsApp Button */
 .social-float.whatsapp-float {
     background-color: #25d366;
