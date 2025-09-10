@@ -15539,3 +15539,89 @@ footer .logo {
     max-width: 120px;
   }
 }
+
+
+
+
+
+.social-float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    z-index: 1000;
+    line-height: 46px;
+    transition: all 0.3s ease;
+}
+
+.social-float::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+/* WhatsApp Button */
+.social-float.whatsapp-float {
+    background-color: #25d366;
+    bottom: 140px;
+}
+.social-float.whatsapp-float::before {
+    background-color: #25d366;
+}
+
+/* Call Button */
+.social-float.call-float {
+    background-color: #00aaff;
+    bottom: 80px;
+}
+.social-float.call-float::before {
+    background-color: #00aaff;
+}
+
+.social-icon {
+    margin-top: 12px;
+}
+
+/* Pulse animation */
+@keyframes pulse-border {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-float {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 38px;
+        right: 10px;
+    }
+    .social-icon {
+        line-height: 0.8 !important;
+    }
+    .social-float.whatsapp-float {
+        bottom: 100px;
+    }
+    .social-float.call-float {
+        bottom: 40px;
+    }
+}
